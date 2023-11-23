@@ -4,7 +4,45 @@ from typing import Dict, List, Optional
 from models import Beer, BeerType, Bill, Friends
 
 
-BILLS = []
+BILLS = [Bill(**{
+    "orders": [
+        {
+            "beer": 1,
+            "quantity": 1,
+            "subtotal": 300,
+            "customer": "Scott Pilgrim"
+        },
+        {
+            "beer": 2,
+            "quantity": 2,
+            "subtotal": 700,
+            "customer": "Scott Pilgrim"
+        },
+        {
+            "beer": 4,
+            "quantity": 1,
+            "subtotal": 500,
+            "customer": "Kim Pine"
+        },
+        {
+            "beer": 3,
+            "quantity": 2,
+            "subtotal": 500,
+            "customer": "Stephen Stills"
+        },
+        {
+            "beer": 4,
+            "quantity": 1,
+            "subtotal": 500,
+            "customer": "Stephen Stills"
+        }
+    ],
+    "is_paid": False,
+    "total": 2500,
+    "paid": 0,
+    "id": 1
+})]
+
 FRIENDS = (Friends.SCOTT, Friends.KIM, Friends.STEPHEN)
 
 BEERS = [
